@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+/* Define macro to reduce the number of charcters */
+#define USER "- Dora Korpar, 2015-10-19\n"
+
 /**
  * main - Entry Point
  *
@@ -8,7 +11,6 @@
 int main(void)
 {
 	/* Using a new print to the console */
-	fprintf(stderr, "and that piece of art is useful\" "
-	"- Dora Korpar, 2015-10-19\n");
+	fprintf(stderr, "and that piece of art is useful\" %s", USER);
 	return (1);
 }
