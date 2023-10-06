@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c $CFILE -o $CFILEl | tr $CFILE 'cl' 'o'
+gcc -c $CFILE -o ${CFILE%.c}.o
