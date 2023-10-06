@@ -1,0 +1,2 @@
+#!/bin/bash
+gcc -S -masm=intel -Og -fverboose-asm $CFILE -o ${CFILE%.c}.s
