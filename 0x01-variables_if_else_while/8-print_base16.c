@@ -13,7 +13,7 @@ int main(void)
 	/* While loop to print hexadecimal numbers */
 	while (n <= 9)
 	{
-		putchar(n);
+		putchar(n + '0');
 		n++;
 	}
 	while (a <= 'f')
