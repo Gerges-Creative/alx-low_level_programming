@@ -20,7 +20,7 @@ int main(void)
 	 * First we calculate the last digit of the number then print it
 	 * along with the number itself
 	 */
-	digit = n % 10;
+	digit = abs(n) % 10;
 	if (digit > 5)
 	{
 		printf("%s %d is %d and is greater than 5\n", N, n, digit);
