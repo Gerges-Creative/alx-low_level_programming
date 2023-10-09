@@ -7,13 +7,18 @@
  */
 int main(void)
 {
-	char hexadecimal[] = "0123456789abcdef";
-	int a = 0;
+	int n = 0;
+	char a = 'a';
 
 	/* While loop to print hexadecimal numbers */
-	while (a < 17)
+	while (n <= 9)
 	{
-		putchar(hexadecimal[a]);
+		putchar(n);
+		n++;
+	}
+	while (a <= 'f')
+	{
+		putchar(a);
 		a++;
 	}
 	putchar('\n');
