@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+/**
+ * main - Entry Point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	/* pirnt the combination of two different digits */
+	int x = 0;
+	int y = 0;
+	int z = 0;
+
+	while (x < 8)
+	{
+		y = 0;
+		while (y < 9)
+		{
+			z = 0;
+			while (z < 10)
+			{
+				if (x < y && y < z)
+				{
+					putchar(x + '0');
+					putchar(y + '0');
+					putchar(z + '0');
+					if (!(x == 7 && y == 8 && z == 9))
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+				z++;
+			}
+			y++;
+		}
+		x++;
+	}
+
+	putchar('\n');
+	return (0);
+}
