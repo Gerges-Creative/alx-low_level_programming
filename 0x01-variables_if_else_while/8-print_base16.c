@@ -16,6 +16,6 @@ int main(void)
 		putchar(hexadecimal[a]);
 		a++;
 	}
-	putchar('\n');
+	/*putchar('\n');*/
 	return (0);
 }
