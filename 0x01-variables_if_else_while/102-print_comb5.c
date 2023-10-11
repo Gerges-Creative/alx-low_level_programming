@@ -11,21 +11,15 @@
 int main(void)
 {
 	/* print out the combination of two two-digits*/
-	int a = 0;
+	int a, b, c, d;
 
-	while (a < 10)
+	for (a = 0; a < 10; a++)
 	{
-		int b = 0;
-
-		while (b < 10)
+		for (b = 0; b < 10; b++)
 		{
-			int c = 0;
-
-			while (c < 10)
+			for (c = 0; c < 10; c++)
 			{
-				int d = 0;
-
-				while (d < 10)
+			        for (d = 0; d < 10; d++)
 				{
 					int x = a * 10 + b;
 					int y = c * 10 + d;
@@ -43,10 +37,11 @@ int main(void)
 							putchar(',');
 							putchar(' ');
 						}
-					} d++;
-				} c++;
-			} b++;
-		} a++;
+					}
+					d = '0';
+				}
+			}
+		}
 	}
 
 	putchar('\n');
