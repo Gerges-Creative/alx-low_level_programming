@@ -21,7 +21,7 @@ int main(void)
 			{
 			        for (d = 0; d < 10; d++)
 				{
-					/* int x = a * 10 + b */;
+					/* int x = a * 10 + b; */
 					/*	int y = c * 10 + d;*/
 
 					if ((a + b) < (c + d)) /* (x < y) */
@@ -38,7 +38,6 @@ int main(void)
 							putchar(' ');
 						}
 					}
-					d = '0';
 				}
 			}
 		}
