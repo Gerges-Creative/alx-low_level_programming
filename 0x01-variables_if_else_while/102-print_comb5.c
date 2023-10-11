@@ -31,14 +31,13 @@ int main(void)
 						putchar(' ');
 						putchar(c + '0');
 						putchar(d + '0');
-
-						if (!(CONDITION(a, b, c, d)))
-						{
-							putchar(',');
-							putchar(' ');
-						}
-
 					}
+				}
+
+				if (!(CONDITION(a, b, c, d)))
+				{
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
