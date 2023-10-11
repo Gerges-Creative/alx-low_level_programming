@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * a function that uses _putchar function to print singular characters
+ * print_alphabet - a function that uses _putchar function
+ * to print singular characters
  *
  *
  */
