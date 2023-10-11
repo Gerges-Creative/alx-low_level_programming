@@ -17,7 +17,7 @@ int main(void)
 	{
 		int b = 0;
 
-		while (b < 9)
+		while (b < 10)
 		{
 			int c = 0;
 
@@ -37,6 +37,7 @@ int main(void)
 						putchar(' ');
 						putchar(c + '0');
 						putchar(d + '0');
+
 						if (!(CONDITION(a, b, c, d)))
 						{
 							putchar(',');
