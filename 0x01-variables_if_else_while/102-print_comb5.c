@@ -21,10 +21,10 @@ int main(void)
 			{
 			        for (d = 0; d < 10; d++)
 				{
-					//	int x = a * 10 + b;
-					//	int y = c * 10 + d;
+					/* int x = a * 10 + b */;
+					/*	int y = c * 10 + d;*/
 
-					if ((a + b) < (c + d)) // (x < y)
+					if ((a + b) < (c + d)) /* (x < y) */
 					{
 						putchar(a + '0');
 						putchar(b + '0');
