@@ -1,0 +1,19 @@
+#include "main.h"
+
+/**
+ * a function that uses _putchar function to print singular characters
+ *
+ *
+ */
+void print_alphabet(void)
+{
+	/* a funciton to print the alphabet */
+		char x;
+
+		for (x = 'a'; x <= 'z'; x++)
+		{
+			_putchar(x);
+		}
+
+		putchar('\n');
+}
