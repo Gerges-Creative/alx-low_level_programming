@@ -33,7 +33,7 @@ int main(void)
 						putchar(d + '0');
 					}
 
-					if (!(CONDITION(a, b, c, d)))
+					if (!(CONDITION(a, b, c, d)) && (x < y))
 					{
 						putchar(',');
 						putchar(' ');
