@@ -16,10 +16,10 @@ int print_last_digit(int n)
 		l = -l;
 		_putchar(l + '0');
 	}
-	esle
+	else
 	{
 		_putchar(l + '0');
 	}
-	
+
 	return (l);
 }
