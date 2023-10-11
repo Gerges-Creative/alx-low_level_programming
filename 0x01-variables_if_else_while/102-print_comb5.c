@@ -2,6 +2,7 @@
 
 /* macro to create the if condition in the last loop */
 #define CONDITION(a, b, c, d) (a == 9 && b == 8 && c == 9 && d == 9)
+
 /**
  * main - Entry Point
  *
@@ -26,7 +27,10 @@ int main(void)
 
 				while (d < 10)
 				{
-					if ((a + b) < (c + d))
+					int x = a * 10 + b;
+					int y = c * 10 + d;
+
+					if (x < y)
 					{
 						putchar(a + '0');
 						putchar(b + '0');
@@ -39,12 +43,9 @@ int main(void)
 							putchar(' ');
 						}
 					} d++;
-				}
-				c++;
-			}
-			b++;
-		}
-		a++;
+				} c++;
+			} b++;
+		} a++;
 	}
 
 	putchar('\n');
