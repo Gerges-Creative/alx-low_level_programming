@@ -9,8 +9,8 @@ int main(void)
 {
 	int i;
 
-	/* this to print that is an infinite loop is comming */
-	printf("Infinite loop incoming :(\n");
+
+	printf("Infinite loop incoming :(\n"); /* this to print that is an infinite loop is comming */
 
 	i = 0;
 
