@@ -9,11 +9,10 @@ int main(void)
 {
 	int i;
 
-
 	printf("Infinite loop incoming :(\n");
 
 	i = 0;
-	/* this to print that is an infinite loop is comming */
+	/* There is no increment indicator for i */
 	while (i < 10)
 	{
 		putchar(i);
