@@ -28,6 +28,4 @@ void print_number(int n)
 		_putchar(i + '0');
 
 	} while (n > 0);
-
-	_putchar('\n');
 }
