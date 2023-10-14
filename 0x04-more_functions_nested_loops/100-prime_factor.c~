@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <math.h>
+
+long is_prime(long num);
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	long int n, factor;
+
+	n = 612852475143;
+	for (factor = 2; factor < n; factor++)
+	{
+		if (is_prime(factor))
+		{
+			while (n % factor == 0)
+			{
+				n /= factor;
+			}
+		}
+	}
+
+	printf("%ld\n", factor);
+
+	return (0);
+}
+
+long is_prime(long num)
+{
+	int flag;
+	double sqroot = sqrt(num);
+
+	for (long i = 2; i <= sqroot; i++)
+	{
+		if (num % i == 0)
+		{
+			flag = 0;
+			break;
+		}
+		else
+		{
+			flag = 1;
+		}
+	}
+
+	return (flag);
+}
