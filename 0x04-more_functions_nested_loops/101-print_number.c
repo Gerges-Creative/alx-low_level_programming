@@ -30,5 +30,5 @@ void print_number(int n)
 
 	} while (n > 0);
 
-	_putchar('\m');
+	_putchar('\n');
 }
