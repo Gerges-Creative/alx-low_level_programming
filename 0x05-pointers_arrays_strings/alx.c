@@ -9,8 +9,8 @@ int main(void)
 {
     char *str;
 
-    str = "abc";
+    str = "01234567890";
 
-    puts2(str);
+    puts_half(str);
     return (0);
 }
