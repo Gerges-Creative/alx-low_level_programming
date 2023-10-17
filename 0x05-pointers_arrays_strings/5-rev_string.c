@@ -11,25 +11,25 @@ void rev_string(char *s)
 {
 	int length = 0;
 	int i = 0;
-
+	char *rev = s;
+	int j;
 
 	while (s[length] != '\0')
 	{
 		length++;
 	}
 
-	length--;
+/*	length--;*/
+	j = length;
 
-	char *rev = s;
-
-	while (length >= 0)
+	while (j >= 0)
 	{
-		char temp = *(rev + i);
+		char temp = rev[i];
 
-		*(rev +i) = *(rev + length);
-		*(rev + length) = temp;
-		_putchar(rev[i]);
+		rev[i] = s[j];
+		rev[j] = temp;
+/*		_putchar(rev[i]);*/
 		i++;
-		length--;
+		j--;
 	}
 }
