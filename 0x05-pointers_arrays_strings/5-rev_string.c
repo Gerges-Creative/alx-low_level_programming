@@ -11,7 +11,7 @@ void rev_string(char *s)
 {
 	int length = 0;
 	int i = 0;
-	char *rev = s;
+
 
 	while (s[length] != '\0')
 	{
@@ -20,12 +20,14 @@ void rev_string(char *s)
 
 	length--;
 
+	char *rev = s;
+
 	while (length >= 0)
 	{
-		char temp = rev[i];
+		char temp = *(rev + i);
 
-		rev[i] = s[length];
-		rev[length] = temp;
+		*(rev +i) = *(rev + length);
+		*(rev + length) = temp;
 		_putchar(rev[i]);
 		i++;
 		length--;
