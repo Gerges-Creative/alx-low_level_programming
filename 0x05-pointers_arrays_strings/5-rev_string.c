@@ -18,13 +18,16 @@ void rev_string(char *s)
 		length++;
 	}
 
+	length--;
+
 	while (length >= 0)
 	{
+		char temp = rev[i];
+
 		rev[i] = s[length];
+		rev[length] = temp;
 		_putchar(rev[i]);
 		i++;
 		length--;
 	}
-
-	_putchar('\n');
 }
