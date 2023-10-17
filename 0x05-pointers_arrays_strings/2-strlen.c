@@ -9,11 +9,15 @@
  */
 int _strlen(char *s)
 {
-	int i;
+	int sum;
 
-	for (i = 0; i <= *s; i++)
+	sum = 0;
+
+	while (*s != '\0')
 	{
+		sum = sum + 1;
+		s++;
 	}
 
-	return (i + 1);
+	return (sum);
 }
