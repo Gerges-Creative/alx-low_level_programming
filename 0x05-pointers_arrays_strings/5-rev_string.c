@@ -20,13 +20,13 @@ void rev_string(char *s)
 	}
 
 /*	length--;*/
-	j = length;
+	j = length - 1;
 
-	while (j >= 0)
+	while (j >= i)
 	{
 		char temp = rev[i];
 
-		rev[i] = s[j];
+		rev[i] = rev[j];
 		rev[j] = temp;
 /*		_putchar(rev[i]);*/
 		i++;
