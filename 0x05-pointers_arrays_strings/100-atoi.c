@@ -10,38 +10,24 @@
  */
 int _atoi(char *s)
 {
-	unsigned int count = 0, sizeNum = 0, digits = 0, posNeg = 1;
-	unsigned int multi = 0, i;
+	unsigned int count = 0, digits = 0, posNeg = 1;
 
-	while (*(s + count) != '\0')
+	while (s[count] != '\0')
 	{
-		if ((*(s + count) > '9' || *(s + count) < '0') && sizeNum > 0)
+		if (s[count] == '-')
+		{
+			posNeg *= -1;
+		}
+		else if (s[count] >= '0' && s[count] <= '9')
+		{
+			digits = digits * 10 + (s[count] - '0');
+		}
+		else if (digits > 0)
 		{
 			break;
 		}
 
-		if (*(s + count) == '-')
-		{
-			posNeg *= -1;
-		}
-
-		if (*(s + count) >= '0' && *(s + count) <= '9')
-		{
-			if (sizeNum > 0)
-			{
-				multi *= 10;
-			}
-
-			sizeNum++;
-		}
-
 		count++;
-	}
-
-	for (i = count - sizeNum; i < count; i++)
-	{
-		digits = digits + ((*(s + i) + '0') * multi);
-		multi /= 10;
 	}
 
 	return (digits * posNeg);
