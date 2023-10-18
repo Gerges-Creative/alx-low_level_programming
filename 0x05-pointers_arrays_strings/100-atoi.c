@@ -39,7 +39,7 @@ int _atoi(char *s)
 
 	for (i = count - sizeNum; i < count; i++)
 	{
-		digits += (s[i] + '0') * multi;
+		digits += ((*(s + i) + '0') * multi);
 		multi /= 10;
 	}
 
