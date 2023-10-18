@@ -14,7 +14,7 @@ int _atoi(char *s)
 
 	while (*(s + count) != '\0')
 	{
-		if ((*(s + count) > 9 || *(s + count) < 0) && sizeNum > 0)
+		if ((*(s + count) > '9' || *(s + count) < '0') && sizeNum > 0)
 		{
 			break;
 		}
@@ -24,7 +24,7 @@ int _atoi(char *s)
 			posNeg *= -1;
 		}
 
-		if (*(s + count) >= 0 && *(s + count) <= 9)
+		if (*(s + count) >= '0' && *(s + count) <= '9')
 		{
 			if (sizeNum > 0)
 			{
