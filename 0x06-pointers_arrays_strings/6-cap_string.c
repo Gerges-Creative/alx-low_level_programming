@@ -12,7 +12,6 @@ int is_separator(char s);
 char *cap_string(char *capw)
 {
 	int i = 0, capital = 0;
-	char *cap = capw;
 
 	while (capw[i] != '\0')
 	{
@@ -24,13 +23,17 @@ char *cap_string(char *capw)
 		if (capital && capw[i] >= 97 && capw[i] <= 122)
 		{
 			capw[i] = (capw[i] - 'a') + 'A';
+			capital = 0;
+		}
+		else if (capital && capw[i] >= 'A' && capw[i] <= 'Z')
+		{
+			capital = 0;
 		}
 
-		capital = 0;
 		i++;
 	}
 
-	return (cap);
+	return (capw);
 }
 
 /**
