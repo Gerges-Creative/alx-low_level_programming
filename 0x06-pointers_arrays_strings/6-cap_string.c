@@ -32,6 +32,13 @@ char *cap_string(char *capw)
 	return (capw);
 }
 
+/**
+ * is_separator - function that checks if letter is a separator
+ *
+ * @s: character input
+ *
+ * Return: return 1 if char is separatro or 0 if not
+ */
 int is_separator(char s)
 {
 	int i;
@@ -41,9 +48,9 @@ int is_separator(char s)
 	{
 		if (s == sep[i])
 		{
-			return 1;
+			return (1);
 		}
 	}
 
-	return 0;
+	return (0);
 }
