@@ -29,6 +29,10 @@ char *cap_string(char *capw)
 		{
 			capital = 0;
 		}
+		else if (capital && capw[i] >= '0' && capw[i] <= '9')
+		{
+			capital = 0;
+		}
 
 		i++;
 	}
