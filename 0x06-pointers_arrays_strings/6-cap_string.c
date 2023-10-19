@@ -1,27 +1,6 @@
 #include "main.h"
 
-/**
- * is_separator - function that checks if letter is a separator
- *
- * @s: character input
- *
- * Return: return 1 if char is separatro or 0 if not
- */
-int is_separator(char s)
-{
-	int i;
-	char sep[] = " \t\n,;.!?\"(){}";
-
-	for (i = 0; sep[i] != '\0'; i++)
-	{
-		if (s == sep[i])
-		{
-			return (1);
-		}
-	}
-
-	return (0);
-}
+int is_separator(char s);
 
 /**
  * *cap_string - CAPITALIZE all the words of a string
@@ -51,4 +30,27 @@ char *cap_string(char *capw)
 	}
 
 	return (capw);
+}
+
+/**
+ * is_separator - function that checks if letter is a separator
+ *
+ * @s: character input
+ *
+ * Return: return 1 if char is separatro or 0 if not
+ */
+int is_separator(char s)
+{
+	int i;
+	char sep[] = " \t\n,;.!?\"(){}";
+
+	for (i = 0; sep[i] != '\0'; i++)
+	{
+		if (s == sep[i])
+		{
+			return (1);
+		}
+	}
+
+	return (0);
 }
