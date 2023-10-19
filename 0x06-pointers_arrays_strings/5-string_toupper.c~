@@ -1,0 +1,12 @@
+#include "main.h"
+
+/**
+ * *string_toupper - to change all lowercase letters to uppercase
+ *
+ * Return: return the all uppercase string
+ */
+char *string_toupper(char *ls)
+{
+	while (ls[i] != '\0')
+	{
+		
