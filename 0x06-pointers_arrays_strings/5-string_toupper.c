@@ -3,6 +3,8 @@
 /**
  * *string_toupper - to change all lowercase letters to uppercase
  *
+ * @loca: pointer that takes a string
+ *
  * Return: return the all uppercase string
  */
 char *string_toupper(char *loca)
