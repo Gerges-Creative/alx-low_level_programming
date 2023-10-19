@@ -8,10 +8,10 @@
  */
 int main(void)
 {
-	char str[] = "Expect the bestPrepare for the worst. Capitalize on what "
+	char str[] = "\nExpect the bestPrepare for the worst. Capitalize on what "
 		"comes.\nhello{world}!hello-world 0123456hello world\thello "
 		"world. hello) world\n"
-		"!Expect,The.Best 24526prepare\tfor;the?worst\"capitalize(on)what{comes}hello World\n";
+		"!Expect,The.Best 24526prepare\tfor;the?worst\"capitalize(on)what{comes}hello World\n\n";
 	char *ptr;
 
 	ptr = cap_string(str);

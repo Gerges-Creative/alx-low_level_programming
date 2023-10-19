@@ -17,7 +17,10 @@ char *cap_string(char *capw)
 	{
 		if (is_separator(capw[i]))
 		{
-			capital = 1;
+			if (capw[i + 1] >= 'a' && capw[i + 1] <= 'z')
+			{
+				capital = 1;
+			}
 		}
 
 		if (capital && capw[i] >= 97 && capw[i] <= 122)
@@ -25,15 +28,19 @@ char *cap_string(char *capw)
 			capw[i] = (capw[i] - 'a') + 'A';
 			capital = 0;
 		}
-		else if (capital && capw[i] >= 'A' && capw[i] <= 'Z')
-		{
-			capital = 0;
-		}
-		else if (capital && capw[i] >= '0' && capw[i] <= '9')
-		{
-			capital = 0;
-		}
-
+/**		else if (capital && capw[i] >= 32 && capw[i] < 126)
+ *		{
+ *			capital = 0;
+ *		}
+ *		else if (capital && capw[i] >= '0' && capw[i] <= '9')
+ *		{
+ *			capital = 0;
+ *		}
+ *		else
+ *		{
+ *			capital = 0;
+ *		}
+ */
 		i++;
 	}
 
