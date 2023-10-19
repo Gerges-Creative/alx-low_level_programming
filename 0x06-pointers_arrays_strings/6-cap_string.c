@@ -20,7 +20,7 @@ char *cap_string(char *capw)
 
 		if (capital && capw[i] >= 97 && capw[i] <= 122)
 		{
-			capw[i] = (cap[i] - 'a') + 'A';
+			capw[i] = (capw[i] - 'a') + 'A';
 			capital = 0;
 		}
 
@@ -32,6 +32,7 @@ char *cap_string(char *capw)
 
 int is_separator(char s)
 {
+	int i;
 	char sep[] = " \t\n,;.!?\"(){}";
 
 	for (i = 0; sep[i] != '\0'; i++)
