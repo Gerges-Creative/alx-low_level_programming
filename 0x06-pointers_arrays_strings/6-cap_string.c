@@ -5,6 +5,8 @@ int is_separator(char s);
 /**
  * *cap_string - CAPITALIZE all the words of a string
  *
+ * @capw: pointer that takes a string
+ *
  * Return: string with all its words caps
  */
 char *cap_string(char *capw)
