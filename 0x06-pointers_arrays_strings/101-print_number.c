@@ -9,7 +9,7 @@
  */
 void pritn_number(int n)
 {
-	int x, mulit = 1;
+	int x, multi = 1;
 
 	if (n < 0)
 	{
@@ -28,7 +28,7 @@ void pritn_number(int n)
 		multi *= 10;
 	}
 
-	for (; multi >=1; multi /= 10)
+	for (; multi >= 1; multi /= 10)
 	{
 		_putchar(((n / multi) % 10) + '0');
 	}
