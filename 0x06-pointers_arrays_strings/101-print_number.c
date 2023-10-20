@@ -7,7 +7,7 @@
  *
  * Return: no return value
  */
-void pritn_number(int n)
+void print_number(int n)
 {
 	int x, multi = 1;
 
