@@ -17,13 +17,14 @@ void print_chessboard(char (*a)[8])
 		{
 			if (a[i][0] == ' ')
 			{
-				_putchar('\n');
 				break;
 			}
 			else
 			{
-				_putchar(s[i][j]);
+				_putchar(a[i][j]);
 			}
 		}
+
+		_putchar('\n');
 	}
 }
