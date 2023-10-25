@@ -10,9 +10,11 @@
 */
 char *_strstr(char *haystack, char *needle)
 {
+	char *big = haystack, *small = needle;
+
 	while (*haystack != '\0')
 	{
-		char *big = haystack, *small = needle;
+		big = haystack, small = needle;
 
 		while (*big == *small)
 		{
@@ -27,5 +29,8 @@ char *_strstr(char *haystack, char *needle)
 		haystack++;
 	}
 
-	return (NULL);
+	if (*small != '\0')
+	{
+		return ('\0');
+	}
 }
