@@ -10,27 +10,25 @@
 */
 char *_strstr(char *haystack, char *needle)
 {
-	char *big = haystack, *small = needle;
+	char *big = haystack, *needle2;
 
 	while (*haystack != '\0')
 	{
-		big = haystack, small = needle;
+		big = haystack;
+		needle2 = needle;
 
-		while (*big == *small)
+		while (*big == *needle2 && *big != '\0' && *needle2 != '\0')
 		{
-			if ((*++small) == '\0')
-			{
-				return (haystack);
-			}
-
 			big++;
+			needle2++;
+		}
+		if (*needle2 == '\0')
+		{
+			return (haystack);
 		}
 
-		haystack++;
+		haystack = big + 1;
 	}
 
-	if (*small != '\0')
-	{
-		return ('\0');
-	}
+	return ('\0');
 }
