@@ -7,32 +7,34 @@
  */
 int palindrome_cmp(char *left, char *right)
 {
-	if (left > right)
+	/* here cmp the postions of the elements */
+	if (left >= right)
 	{
 		return (1);
 	}
-
-	if (left != right)
+	/* here cmp the value of the letters */
+	if (*left == *right)
 	{
-		return (0);
+		return (palindrome_cmp(++left, --right));
 	}
 
-	return (palindrome_cmp(++left, --right));
+	return (0);
+
 }
 
 /**
  * _strlen - calculates the length of the string
  * @c: string
- * Return: pointer to the string at the last value
+ * Return: length of the string
  */
-char _strlen(char *c)
+int _strlen(char *c)
 {
 	if (*c == '\0')
 	{
-		return (c);
+		return (0);
 	}
-
-	return (_strlen(++c));
+	/* here add 1 with every return when you execute the function */
+	return (1 + _strlen(++c));
 }
 
 /**
@@ -45,7 +47,7 @@ char _strlen(char *c)
  */
 int is_palindrome(char *s)
 {
-	char *length = _strlen(s);
+	int length = _strlen(s);
 
-	return (palindrome_cmp(s, (length -1)));
+	return (palindrome_cmp(s, (s + length - 1)));
 }
