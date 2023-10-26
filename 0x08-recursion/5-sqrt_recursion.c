@@ -1,0 +1,36 @@
+#include "main.h"
+
+/**
+ * find_root - find the root of n
+ * @n: number
+ * @xroot: root of n
+ * Return: -1 if n doesn't have square root or the square root
+ */
+int find_root(int n, int xroot)
+{
+	if (xroot * xroot == n)
+	{
+		return (xroot);
+	}
+	else if (xroot * xroot > n)
+	{
+		return (-1);
+	}
+
+	return (find_root(n, ++xroot));
+}
+
+/**
+ * _sqrt_recursion - calculates the square root of a number
+ * @n: number
+ * Return: return the square root or -1 if it doesn't have one
+ */
+int _sqrt_recursion(int n)
+{
+	if (n < 0)
+	{
+		return (-1);
+	}
+
+	return (find_root(n, 0));
+}
