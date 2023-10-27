@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include "main.h"
+#include <stdlib.h>
+
+/**
+ * main - Entry point
+ * @argc: arg count
+ * @argv: arg vector
+ * Return: Always 0 (Success)
+ */
+int main(int argc, char *argv[])
+{
+	int multi;
+
+	if (argc == 1)
+	{
+		printf("Error\n");
+	}
+
+	multi = atoi(argv[1]) * atoi(argv[2]);
+
+	printf("%d\n", multi);
+
+	return (0);
+}
