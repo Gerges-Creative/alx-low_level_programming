@@ -10,7 +10,7 @@ char *_strdup(char *str)
 	char *strdup;
 	int length = 0, i;
 
-	if (*str == '\0')
+	if (str == NULL)
 	{
 		return (NULL);
 	}
@@ -33,7 +33,7 @@ char *_strdup(char *str)
 		strdup[i] = str[i];
 	}
 
-	strdup[length] = '\0';
+	strdup[i] = '\0';
 
 	return (strdup);
 }
