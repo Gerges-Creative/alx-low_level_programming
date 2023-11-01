@@ -7,27 +7,33 @@
  */
 char *_strdup(char *str)
 {
-	char *strdup = str;
-	int i, length;
+	char *strdup;
+	int length = 0, i;
 
-	if (*str == NULL)
+	if (*str == '\0')
 	{
 		return (NULL);
 	}
 
-	for (i = 0; *str != '\0'; str++)
+	for (; str[length] != '\0'; str++)
 	{
 		length++;
 	}
 
-	strdup = (char *)malloc(length * sizeof(char));
+	strdup = (char *)malloc((length + 1) * sizeof(char));
 
 	if (strdup == NULL)
 	{
 		return (NULL);
 	}
 
-	free(strdup);
+
+	for (i = 0; i < length; i++)
+	{
+		strdup[i] = str[i];
+	}
+
+	strdup[length] = '\0';
 
 	return (strdup);
 }
