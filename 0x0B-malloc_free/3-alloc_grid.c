@@ -34,10 +34,10 @@ int **alloc_grid(int width, int height)
 			arr2D[i][j] = 0;
 		}
 
-		if (arr2D[i][j] == NULL)
+		if (arr2D[i] == NULL)
 		{
-			free(arr2D[i][j]);
-			return (NULL):
+			free(arr2D[i]);
+			return (NULL);
 		}
 	}
 
