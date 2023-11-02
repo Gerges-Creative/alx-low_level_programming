@@ -1,13 +1,13 @@
-#inlcude "main.h"
-11;rgb:2828/2a2a/3636
+#include "main.h"
+
 /**
  * strlen - count the length of a string
  * @s: string
  * Return: int number of length
  */
-int strlen(char *s)
+int mystrlen(char *s)
 {
-	int len = 0;
+	unsigned int len = 0;
 
 	while (s[len] != '\0')
 	{
@@ -29,8 +29,8 @@ int strlen(char *s)
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *strcat;
-	int len1, len2, length, i, j = 0;
+	char *strConcat;
+	unsigned int len1, len2, length, i, j = 0;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -38,34 +38,34 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	len1 = strlen(s1);
-	len2 = strlen(s2);
+	len1 = mystrlen(s1);
+	len2 = mystrlen(s2);
 
 	if (n > len2)
 		n = len2;
 
 	length = len1 + n + 1;
 
-	strcat = malloc(sizeof(*strcat) * length);
+	strConcat = malloc(sizeof(*strConcat) * length);
 
-	if (strcat == NULL)
+	if (strConcat == NULL)
 	{
-		free(strcat);
+		free(strConcat);
 		return (NULL);
 	}
 
 	for (i = 0; i < length; i++)
 	{
 		if (i < len1)
-			strcat[i] = s1[i];
+			strConcat[i] = s1[i];
 		else if (j < n)
 		{
-			strcat[i] = s2[j];
+			strConcat[i] = s2[j];
 			j++;
 		}
 	}
 
-	strcat[i] = '\0';
+	strConcat[i] = '\0';
 
-	return (strcat);
+	return (strConcat);
 }
