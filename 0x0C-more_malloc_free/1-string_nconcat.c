@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * strlen - count the length of a string
+ * mystrlen - count the length of a string
  * @s: string
  * Return: int number of length
  */
@@ -50,6 +50,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (strConcat == NULL)
 	{
+		free(strConcat);
 		return (NULL);
 	}
 
