@@ -36,7 +36,11 @@ int **alloc_grid(int width, int height)
 
 		if (arr2D[i] == NULL)
 		{
-			free(arr2D[i]);
+			for (j = 0; j < i; j++)
+			{
+				free(arr2D[j]);
+			}
+			free(arr2D);
 			return (NULL);
 		}
 	}
