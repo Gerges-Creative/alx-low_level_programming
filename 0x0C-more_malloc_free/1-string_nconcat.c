@@ -1,5 +1,5 @@
 #inlcude "main.h"
-
+11;rgb:2828/2a2a/3636
 /**
  * strlen - count the length of a string
  * @s: string
@@ -67,5 +67,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	strcat[i] = '\0';
 
-	return (strCon);
+	return (strcat);
 }
