@@ -44,18 +44,15 @@ char *copystring(char *dest, char *src)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dogx1;
-	char *namecpy;
-	char *ownercpy;
+	char *namecpy, *ownercpy;
 
 	dogx1 = malloc(sizeof(dog_t));
-
 	if (dogx1 == NULL)
 		return (NULL);
 
 	if (name != NULL)
 	{
 		namecpy = malloc(length(name) + 1);
-
 		if (namecpy == NULL)
 		{
 			free(dogx1);
@@ -67,14 +64,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 	else
 		return (NULL);
 
-
 	dogx1->age = age;
-
 
 	if (owner != NULL)
 	{
 		ownercpy = malloc(length(owner) + 1);
-
 		if (ownercpy == NULL)
 		{
 			free(namecpy);
@@ -86,7 +80,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	else
 		return (NULL);
-
 
 	return (dogx1);
 }
