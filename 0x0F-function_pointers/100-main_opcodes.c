@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int bytes;
-	unsigned char *mainAddress = (unsigned char *) main;
+	char *mainAddress = (char *) main;
 
 	bytes = atoi(argv[1]);
 
@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 	{
 		printf("%02hhx", *mainAddress);
 
-		if (bytes)
+		if (bytes >= 2)
 			printf(" ");
 
 		mainAddress++;
