@@ -1,6 +1,5 @@
-#include "function_pointers.h"
+#include "3-calc.h"
 
-#define ARG (argv[2] != '+' || argv[2] != '-'|| argv[2] != '*')
 
 /**
  * main - execute the code and check it
@@ -11,6 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int num1, num2;
+	int (*operation)(int, int);
 
 	if (argc != 4)
 	{
@@ -18,7 +18,9 @@ int main(int argc, char *argv[])
 		return (98);
 	}
 
-	if (ARG || argv[2] != '/' || argv[2] != '%')
+	operation = get_op_func(argv[2]);
+
+	if (operation == NULL)
 	{
 		printf("Error\n");
 		return (99);
@@ -27,7 +29,7 @@ int main(int argc, char *argv[])
 	 num1 = atoi(argv[1]);
 	 num2 = atoi(argv[3]);
 
-	get_op_func( argv[2])(num1, num2);
+	 printf("%d\n", operation(num1, num2));
 
 	return (0);
 }
