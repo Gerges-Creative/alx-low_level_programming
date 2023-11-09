@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	{
 		printf("%02hhx", *mainAddress);
 
-		if (bytes >= 2)
+		if (bytes > 1)
 			printf(" ");
 
 		mainAddress++;
