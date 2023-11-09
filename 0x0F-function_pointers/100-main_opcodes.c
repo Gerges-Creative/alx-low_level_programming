@@ -29,9 +29,9 @@ int main(int argc, char *argv[])
 
 	while (bytes > 0)
 	{
-		printf("%02x", *mainAddress && 0xFF);
+		printf("%02hhx", *mainAddress);
 
-		if (bytes > 1)
+		if (bytes >= 1)
 			printf(" ");
 
 		mainAddress++;
