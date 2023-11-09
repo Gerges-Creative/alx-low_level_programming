@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 
 	while (bytes > 0)
 	{
-		printf("%02hhx", *mainAddress);
+		printf("%02hhx", *mainAddress && 0xFF);
 
 		if (bytes > 1)
 			printf(" ");
