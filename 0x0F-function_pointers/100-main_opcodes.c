@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int bytes;
-	char *mainAddress = (char *) main;
+	unsigned char *mainAddress = (unsigned char *) main;
 
 	bytes = atoi(argv[1]);
 
