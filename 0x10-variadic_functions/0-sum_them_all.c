@@ -1,4 +1,4 @@
-#include "variadic_function.h"
+#include "variadic_functions.h"
 
 /**
  * sum_them_all - a variadic function to sum numbers
@@ -7,9 +7,12 @@
  */
 int sum_them_all(const unsigned int n, ...)
 {
-	int i;
+	unsigned int i;
 	int sum = 0;
 	va_list ptr;
+
+	if (n == 0)
+		return (0);
 
 	va_start(ptr, n);
 
