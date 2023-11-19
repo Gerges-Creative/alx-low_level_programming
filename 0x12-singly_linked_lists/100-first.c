@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * Apply the constructor attribute to startup() so that it
+ * startup - Apply the constructor attribute to startup() so that it
  *   is executed before main()
  */
-void startup (void) __attribute__ ((constructor));
+void startup(void) __attribute__ ((constructor));
 
 /**
  * startup - prints a string before the main function is executed
