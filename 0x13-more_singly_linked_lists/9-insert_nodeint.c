@@ -1,4 +1,4 @@
-#inlcude "lists.h"
+#include "lists.h"
 
 /**
  * insert_nodeint_at_index - insert a node at a certain index
@@ -9,7 +9,7 @@
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *idxnode, *newnode;
+	listint_t *idxnode, *newnode, *temp;
 	unsigned int count = 0;
 
 	newnode = malloc(sizeof(listint_t));
@@ -25,7 +25,11 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	newnode->n = n;
 	if (idxnode)
+	{
+		temp = idxnode->next;
 		idxnode->next = newnode;
+		newnode->next = temp;
+	}
 	else
 		return (NULL);
 
