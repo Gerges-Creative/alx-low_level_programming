@@ -7,22 +7,30 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int num, i = 0;
-
+	unsigned int num = 0, pow2 = 1;
+	int i = 0;
 	if (b == NULL)
 		return (0);
 
 	while (b[i] != '\0')
 	{
-		if (b[i] != '0' || b[i] != '1')
+		i++;
+	}
+
+	i--;
+
+	while (i >= 0)
+	{
+		if (b[i] != '0' && b[i] != '1')
 			return (0);
 
 		if (b[i] == '1')
 		{
-			num += (2**i);
+			num += pow2;
 		}
 
-		i++;
+		pow2 *= 2;
+		i--;
 	}
 
 	return (num);
