@@ -20,7 +20,8 @@ void print_binary(unsigned long int n)
 	if (n < pow2 && n != 0)
 		len--;
 
-	mask <<= len;
+	if (mask > 0)
+		mask <<= len;
 
 	while (mask > 0)
 	{
