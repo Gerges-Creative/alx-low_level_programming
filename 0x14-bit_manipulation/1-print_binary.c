@@ -16,12 +16,13 @@ void print_binary(unsigned long int n)
 		len++;
 	}
 
-	mask <<= len;
 
 	if (n < pow2 && n != 0)
-		mask >>= 1;
+		len--;
 
-	while (mask != 0)
+	mask <<= len;
+
+	while (mask > 0)
 	{
 		if (n & mask)
 		{
