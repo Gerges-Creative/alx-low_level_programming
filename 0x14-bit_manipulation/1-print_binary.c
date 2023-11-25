@@ -7,37 +7,31 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int pow2 = 1;
-	int i = 0, x;
+	unsigned long int pow2 = 1, mask = 1;
+	int len = 0;
 
 	while (n > pow2)
 	{
 		pow2 *= 2;
-		i++;
+		len++;
 	}
 
-	x = i;
+	mask <<= len;
 
-	while (n != 0)
+	if (n < pow2 && n != 0)
+		mask >>= 1;
+
+	while (mask != 0)
 	{
-		if (n == pow2)
+		if (n & mask)
 		{
 			_putchar(1 + '0');
-
-			while (i >= 0)
-			{
-				_putchar(0 + '0');
-				i--;
-			}
-			break;
 		}
-		else if (n < pow2)
+		else
 		{
-			if (i == x)
-				continue;
-			else
-			{
-				_putchar(0 + '0');
-				continue;
-			}
+			_putchar(0 + '0');
 		}
+
+		mask >>= 1;
+	}
+}
