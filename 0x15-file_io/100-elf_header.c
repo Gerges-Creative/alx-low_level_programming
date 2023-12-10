@@ -30,6 +30,7 @@ void display_elf_header_info(Elf64_Ehdr *elf_header);
 int main(int argc, char *argv[])
 {
 	int fd;
+	Elf64_Ehdr elf_header;
 
 	if (argc != 2)
 	{
@@ -45,8 +46,6 @@ int main(int argc, char *argv[])
 	}
 
 	/* Read the ELF header */
-	Elf64_Ehdr elf_header;
-
 	if (read(fd, &elf_header, sizeof(Elf64_Ehdr)) != sizeof(Elf64_Ehdr))
 	{
 		perror("Error reading ELF header");
