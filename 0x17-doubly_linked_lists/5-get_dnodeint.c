@@ -1,5 +1,5 @@
 #include "lists.h"
-77;30604;0c
+
 /**
  * get_dnodeint_at_index - get a node at nth index
  * @head: the head node
