@@ -1,4 +1,4 @@
-#incldue "hash_tables.c"
+#include "hash_tables.h"
 
 /**
  * create_node - a function to create a new node for the hash table
@@ -6,7 +6,7 @@
  * @value: the value
  * Return: pointer to the newly created node
  */
-hash_node_t *create_node(char *key, char *value)
+hash_node_t *create_node(const char *key, const char *value)
 {
 	hash_node_t *node;
 
@@ -18,6 +18,7 @@ hash_node_t *create_node(char *key, char *value)
 
 	strcpy(node->key, key);
 	strcpy(node->value, value);
+	node->next = NULL;
 
 	return (node);
 }
@@ -39,12 +40,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	node = create_node(key, value);
 
-	index = key_index(key, ht->size);
+	index = key_index((const unsigned char*) key, ht->size);
 
 	current_node = ht->array[index];
 
 	if (current_node == NULL)
+	{
 		ht->array[index] = node;
+	}
 	else
 	{
 		node->next = current_node;
