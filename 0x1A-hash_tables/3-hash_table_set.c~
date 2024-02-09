@@ -1,7 +1,0 @@
-#incldue "hash_tables.c"
-
-/**
- * hash_table_set - a function that adds an element to the hash table
- * @ht: the hash table the key/value is added to
- * @key: the key
- * @value: the value associated with the key
