@@ -1,12 +1,13 @@
 CC	= gcc
-SRC	= $(wildcard *.c)
+SRC	= main.c school.c
 OBJ	= $(SRC:.c=.o)
 NAME	= school
 
 all: $(NAME)
 
 $(NAME): m.h $(OBJ)
-	$(CC) -o $@ $^
+	$(CC) $(OBJ) -o $(NAME)
 
-%.o: %.c
-	$(CC) -c $< -o $@
+# Makefile itself deals with the ojbect files I don't know how yet!
+# %.o: %.c
+#	$(CC) -c $< -o $@
