@@ -12,11 +12,11 @@ $(NAME): m.h $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) $(wildcard *~) school
+	$(RM) $(wildcard *~) $(NAME)
 
 oclean:
-	$(RM) $(wildcard *.o)
+	$(RM) $(OBJ)
 
 fclean: clean oclean
 
-re: oclean $(NAME)
+re: oclean all
