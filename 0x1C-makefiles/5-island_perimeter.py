@@ -1,5 +1,11 @@
 #!/usr/bin/python3
+"""
+5-island_perimeter
+"""
 def island_perimeter(grid):
+    """
+    Function to calculate the perimeter of the grid
+    """
     perimeter = 0
 
     for i in range(len(grid)):
